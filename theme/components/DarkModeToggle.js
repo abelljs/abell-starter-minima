@@ -1,7 +1,7 @@
 const html = /* html */`
-  <button onclick="toggleTheme()" class="dark-mode-toggle">
-    <span class="sun"> <img width="35px" src="../icons/sun.svg" /></span>
-    <span class="moon"><img width="25px" src="../icons/moon.svg" /></span>
+  <button aria-label="Dark mode toggle" onclick="toggleTheme()" class="dark-mode-toggle">
+    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="../icons/sun.svg" /></span>
+    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="../icons/moon.svg" /></span>
   </button>
 `;
 
