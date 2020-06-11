@@ -53,7 +53,7 @@
     </div>
     <hr/>
     <br/><br/>
-    {{ TwitterShareButton({link:`${globalMeta.domain}/${meta.$slug}/`}) }}
+    {{ TwitterShareButton({link:`${globalMeta.domain}/${meta.$path}/`}) }}
   </main>
   
   {{ Footer.html }}
