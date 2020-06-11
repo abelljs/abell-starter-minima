@@ -7,6 +7,5 @@ module.exports = {
     name: 'Hoomans of Abell Land',
     twitter: 'AbellLand',
     domain: 'https://abell-starter-minima.netlify.app'
-  },
-  ignoreInBuild: ['styles/inlined']
+  }
 }
