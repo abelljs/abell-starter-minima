@@ -35,9 +35,5 @@ console.log(c);
 
 ![a doggo gif with doggo moving his ears up and down](assets/doggo.gif)
 
-
-
-<br/>
-
 *Bye 🐨*
 
