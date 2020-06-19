@@ -18,17 +18,16 @@ You can create your blog in one button click!!
 
 <br/>
 This will create a new project in your GitHub and will deploy it to Netlify. Later you can make changes in the blog by editing files in your new project.
-<br/>
-
-
-<br/>
+<br/><br/>
 
 ## Writing blog
 
 After deployment, a repository will be created on your GitHub account. You can edit files in `content` directory to create blog.
 <br/><br/>
-You can also use codesandbox to edit/update and deploy blogs without local setup. <br/><br/>
 
+## Documentation
+
+Full documentation at [https://abelljs.org](https://abelljs.org)
 
 <br/>
 
