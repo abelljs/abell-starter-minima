@@ -16,10 +16,10 @@
   <meta name="og:description" content="{{ meta.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <!-- Preloads for performance -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" as="style" onload="this.rel = 'stylesheet'; this.onload = null" >
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" as="style" onload="this.rel = 'stylesheet'; this.onload = null" />
-  <link rel="preload" href="../styles/blog.css"  as="style" onload="loadContent(); this.rel = 'stylesheet';this.onload = null" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
+  <link rel="stylesheet" href="../styles/blog.css"/>
+
+
   <title>{{ meta.title }} | {{ globalMeta.siteName }}</title>
 
   <style>
@@ -28,10 +28,6 @@
     main {
       padding: 100px 200px;
     }
-    .content {
-      display: none;
-    }
-    {{ Placeholder.css }}
 
     @media (max-width: 768px) {
       main {
@@ -46,7 +42,6 @@
   <main>
     {{ DarkModeToggle.html }}
     <div class="blog-container">
-      {{ Placeholder.html }}
       <div class="content">
         {{ $importContent(`${meta.$path}/index.md`) }}
       </div>
@@ -57,15 +52,10 @@
   </main>
   
   {{ Footer.html }}
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
   <script defer src="../js/static-main.js"></script>
   <script>
-    function loadContent() {
-      document.querySelector('.content').style.display = 'block';
-      document.querySelector('.loading-placeholder').style.display = 'none';
-    }
-
     {{ DarkModeToggle.inlinedJS }}
   </script>
 </body>
