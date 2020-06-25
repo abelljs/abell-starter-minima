@@ -1,7 +1,6 @@
 {{
   const DarkModeToggle = require('../components/DarkModeToggle.js');
   const TwitterShareButton = require('../components/TwitterShareButton.js');
-  const Placeholder = require('../components/Placeholder.js');
   const Footer = require('../components/Footer.js');
   const globalInlinedCSS = require('../styles/inlined/global.css.js');
 }}
