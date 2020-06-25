@@ -14,10 +14,8 @@
   <meta name="og:title" content="{{ meta.title }}"/>
   <meta name="og:description" content="{{ meta.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
-  <link rel="stylesheet" href="../styles/blog.css"/>
 
+  <link rel="stylesheet" href="../styles/blog.css"/>
 
   <title>{{ meta.title }} | {{ globalMeta.siteName }}</title>
 
@@ -51,6 +49,8 @@
   </main>
   
   {{ Footer.html }}
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
   <script defer src="../js/static-main.js"></script>
