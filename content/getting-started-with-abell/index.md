@@ -16,6 +16,13 @@ You can create your blog in one button click!!
 
 This will create a new project in your GitHub and will deploy it to Netlify. Later you can make changes in the blog by editing files in your new project.
 
+*or*
+
+you can create project locally with,
+```sh
+npx create-abell-app my-cool-blog
+```
+
 ## Writing blog
 
 After deployment, a repository will be created on your GitHub account. You can edit files in `content` directory to create blog.
