@@ -10,9 +10,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "abell": "^0.3.3"
+    "abell": "^0.3.5"
   }
 }
