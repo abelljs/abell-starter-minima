@@ -1,7 +1,9 @@
 {{
-  const DarkModeToggle = require('./components/DarkModeToggle.js');
+  const { globalMeta, contentArray } = Abell;
+  
+  const DarkModeToggle = require('./components/DarkModeToggle.abell');
   const globalInlinedCSS = require('./styles/inlined/global.css.js');
-  const Footer = require('./components/Footer.js');
+  const Footer = require('./components/Footer.abell');
 }}
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +16,11 @@
   <title>{{ globalMeta.siteName }}</title>
   <style>
     {{ globalInlinedCSS }}
-    {{ DarkModeToggle.css }}
   </style>
 </head>
 <body>
   <header>
-    {{ DarkModeToggle.html }}
+    <DarkModeToggle/>
     <h1>{{ globalMeta.siteName }}</h1>
     <div class="header-bio">
       Abell Minima is a starter blog built with Abell. <br/>This template is designed and maintained by <b>{{ globalMeta.name }}</b> you can follow them on <a href="https://twitter.com/{{ globalMeta.twitter }}">Twitter @{{ globalMeta.twitter }}</a>.
@@ -28,7 +29,7 @@
   <main>
     <div class="article-container">
       {{
-        $contentArray
+        contentArray
           .map(meta => `
             <article class="shadow">
               <a href="${meta.$path}/">
@@ -38,14 +39,10 @@
               </a>
             </article>
           `)
-          .join('')
       }}
     </div>
   </main>
-  {{ Footer.html }}
+  <Footer/>
   <script defer src="./js/static-main.js"></script>
-  <script>
-    {{ DarkModeToggle.inlinedJS }}
-  </script>
 </body>
 </html>

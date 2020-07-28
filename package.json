@@ -13,6 +13,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "abell": "^0.3.5"
+    "abell": "^0.4.0-alpha.5"
   }
 }

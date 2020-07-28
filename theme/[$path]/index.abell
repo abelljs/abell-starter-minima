@@ -1,7 +1,9 @@
 {{
-  const DarkModeToggle = require('../components/DarkModeToggle.js');
-  const TwitterShareButton = require('../components/TwitterShareButton.js');
-  const Footer = require('../components/Footer.js');
+  const { globalMeta, meta, importContent } = Abell;
+
+  const DarkModeToggle = require('../components/DarkModeToggle.abell');
+  const TwitterShareButton = require('../components/TwitterShareButton.abell');
+  const Footer = require('../components/Footer.abell');
   const globalInlinedCSS = require('../styles/inlined/global.css.js');
 }}
 <!DOCTYPE html>
@@ -31,31 +33,25 @@
         padding: 40px 20px;
       }
     }
-
-    {{ DarkModeToggle.css }}
   </style>
 </head>
 <body>
   <main>
-    {{ DarkModeToggle.html }}
+    <DarkModeToggle/>
     <div class="blog-container">
       <div class="content">
-        {{ $importContent(`${meta.$path}/index.md`) }}
+        {{ importContent(`${meta.$path}/index.md`) }}
       </div>
     </div>
-    <hr/>
-    <br/><br/>
-    {{ TwitterShareButton({link:`${globalMeta.domain}/${meta.$path}/`}) }}
+    <hr/><br/><br/>
+    <TwitterShareButton props={link: `${globalMeta.domain}/${meta.$path}/`}/>
   </main>
-  
-  {{ Footer.html }}
+  <Footer/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-  <script defer src="../js/static-main.js"></script>
-  <script>
-    {{ DarkModeToggle.inlinedJS }}
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script src="../js/static-main.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

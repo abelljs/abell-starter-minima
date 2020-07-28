@@ -43,12 +43,4 @@ a{
 .shadow{
   box-shadow: 0 5px 20px -4px #0005;
 }
-
-footer{
-  padding: 20px 30px;
-}
-.twitter-share-button{
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: var(--elevation-background);
-}`;
+`;
