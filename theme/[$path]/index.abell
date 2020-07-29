@@ -44,14 +44,15 @@
       </div>
     </div>
     <hr/><br/><br/>
-    <TwitterShareButton props={link: `${globalMeta.domain}/${meta.$path}/`}/>
+    <TwitterShareButton 
+      props={link: `${globalMeta.domain}/${meta.$path}/`}
+    />
   </main>
   <Footer/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-  <script src="../js/static-main.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script defer src="../js/static-main.js"></script>
 </body>
 </html>
