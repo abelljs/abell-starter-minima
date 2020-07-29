@@ -5,7 +5,7 @@
   </footer>
 </template>
 <style>
-  footer{
+  footer {
     padding: 20px 30px;
   }
 </style>
