@@ -4,7 +4,7 @@
     <div style="text-align: right;">© <span id="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
   </footer>
 </template>
-<style>
+<style inlined>
   footer {
     padding: 20px 30px;
   }

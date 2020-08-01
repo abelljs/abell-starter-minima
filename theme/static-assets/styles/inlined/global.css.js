@@ -16,31 +16,34 @@ body.dark {
   --link-color: #09f;
 }
 
-html, body{
+html, body {
   margin: 0px;
   padding: 0px;
   width: 100%;
   overflow-x: hidden;
 }
 
-body{
+body {
   background-color: var(--background-primary);
   font-family: var(--font-family-primary);
   color: var(--font-color-primary);
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-primary);
   color: var(--font-color-primary);
 }
-*{
+
+* {
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
   color: var(--link-color);
 }
-.shadow{
+
+.shadow {
   box-shadow: 0 5px 20px -4px #0005;
 }
 `;

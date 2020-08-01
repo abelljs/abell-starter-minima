@@ -2,7 +2,7 @@
   const { globalMeta, contentArray } = Abell;
   
   const DarkModeToggle = require('./components/DarkModeToggle.abell');
-  const globalInlinedCSS = require('./styles/inlined/global.css.js');
+  const globalInlinedCSS = require('./static-assets/styles/inlined/global.css.js');
   const Footer = require('./components/Footer.abell');
 }}
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to the {{ globalMeta.siteName }}, A blog by {{ globalMeta.name }}" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./static-assets/styles/index.css">
   <title>{{ globalMeta.siteName }}</title>
   <style>
     {{ globalInlinedCSS }}
@@ -30,7 +30,7 @@
     <div class="article-container">
       {{
         contentArray
-          .map(meta => `
+          .map(meta => /* html */ `
             <article class="shadow">
               <a href="${meta.$path}/">
                 <h2>${meta.title}</h2>
@@ -43,6 +43,6 @@
     </div>
   </main>
   <Footer/>
-  <script defer src="./js/static-main.js"></script>
+  <script defer src="./static-assets/js/static-main.js"></script>
 </body>
 </html>

@@ -4,35 +4,25 @@
   const DarkModeToggle = require('../components/DarkModeToggle.abell');
   const TwitterShareButton = require('../components/TwitterShareButton.abell');
   const Footer = require('../components/Footer.abell');
-  const globalInlinedCSS = require('../styles/inlined/global.css.js');
+  const globalInlinedCSS = require('../static-assets/styles/inlined/global.css.js');
 }}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="description" content="{{ meta.description }}"/>
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-
   <meta name="og:title" content="{{ meta.title }}"/>
   <meta name="og:description" content="{{ meta.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../static-assets/styles/blog.css"/>
 
-  <link rel="stylesheet" href="../styles/blog.css"/>
-
-  <title>{{ meta.title }} | {{ globalMeta.siteName }}</title>
+  <title>{{ meta.title }} - {{ globalMeta.siteName }}</title>
 
   <style>
     /* inlined-css for fast load */
     {{ globalInlinedCSS }}
-    main {
-      padding: 100px 200px;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        padding: 40px 20px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -53,6 +43,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-  <script defer src="../js/static-main.js"></script>
+  <script defer src="../static-assets/js/static-main.js"></script>
 </body>
 </html>

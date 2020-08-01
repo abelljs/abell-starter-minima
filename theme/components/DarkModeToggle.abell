@@ -1,8 +1,8 @@
 <AbellComponent>
 <template>
   <button aria-label="Activate Dark Mode" aria-pressed="false" onclick="toggleTheme(this)" class="dark-mode-toggle">
-    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="../icons/sun.svg" /></span>
-    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="../icons/moon.svg" /></span>
+    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="../static-assets/icons/sun.svg" /></span>
+    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="../static-assets/icons/moon.svg" /></span>
   </button>
 </template>
 <style inlined>
@@ -10,8 +10,8 @@
   .dark-mode-toggle {
     cursor: pointer;
     float: right;
-    border:none;
-    background:transparent;
+    border: none;
+    background: transparent;
   }
   body:not(.user-is-tabbing) .dark-mode-toggle:focus {
     outline: none;
@@ -22,10 +22,10 @@
   .dark-mode-toggle .sun {
     padding: 5px;
   }
-  body .dark-mode-toggle .moon {display: none}
-  body .dark-mode-toggle .sun {display: inline-block}
   body.dark .dark-mode-toggle .moon {display: inline-block;}
   body.dark .dark-mode-toggle .sun {display: none;}
+  body .dark-mode-toggle .moon {display: none}
+  body .dark-mode-toggle .sun {display: inline-block}
 </style>
 <script inlined>
   function toggleTheme(toggleButton) {
