@@ -4,12 +4,12 @@
     <div style="text-align: right;">© <span id="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
   </footer>
 </template>
-<style inlined>
+<style>
   footer {
     padding: 20px 30px;
   }
 </style>
-<script inlined>
+<script>
   document.querySelector('#footer-year').innerText = new Date().getFullYear();
 </script>
 </AbellComponent>
