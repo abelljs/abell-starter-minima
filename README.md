@@ -14,7 +14,14 @@ A starter template for creating your blog with [abelljs/abell](https://github.co
 
 ## Using this template to create your blog.
 
-Just one click and your blog will be ready!
+### Create locally with create-abell-app
+```
+npx create-abell-app my-blog --template abelljs/abell-starter-minima
+```
+
+or
+
+Create Repository to your account, and Deploy to Netlify in one click 🎉
 
 [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/abelljs/abell-starter-minima)
 

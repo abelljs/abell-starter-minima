@@ -1,7 +1,9 @@
 {{
-  const DarkModeToggle = require('./components/DarkModeToggle.js');
-  const globalInlinedCSS = require('./styles/inlined/global.css.js');
-  const Footer = require('./components/Footer.js');
+  const { globalMeta, contentArray, $root } = Abell;
+  
+  const DarkModeToggle = require('./components/DarkModeToggle.abell');
+  const InlinedCSS = require('./static-assets/styles/InlinedCSS.abell');
+  const Footer = require('./components/Footer.abell');
 }}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,16 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to the {{ globalMeta.siteName }}, A blog by {{ globalMeta.name }}" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="{{ $root }}/static-assets/styles/index.css">
   <title>{{ globalMeta.siteName }}</title>
-  <style>
-    {{ globalInlinedCSS }}
-    {{ DarkModeToggle.css }}
-  </style>
+  <InlinedCSS/>
 </head>
 <body>
   <header>
-    {{ DarkModeToggle.html }}
+    <DarkModeToggle/>
     <h1>{{ globalMeta.siteName }}</h1>
     <div class="header-bio">
       Abell Minima is a starter blog built with Abell. <br/>This template is designed and maintained by <b>{{ globalMeta.name }}</b> you can follow them on <a href="https://twitter.com/{{ globalMeta.twitter }}">Twitter @{{ globalMeta.twitter }}</a>.
@@ -28,8 +27,8 @@
   <main>
     <div class="article-container">
       {{
-        $contentArray
-          .map(meta => `
+        contentArray
+          .map(meta => /* html */ `
             <article class="shadow">
               <a href="${meta.$path}/">
                 <h2>${meta.title}</h2>
@@ -38,14 +37,10 @@
               </a>
             </article>
           `)
-          .join('')
       }}
     </div>
   </main>
-  {{ Footer.html }}
-  <script defer src="./js/static-main.js"></script>
-  <script>
-    {{ DarkModeToggle.inlinedJS }}
-  </script>
+  <Footer/>
+  <script defer src="{{ $root }}/static-assets/js/static-main.js"></script>
 </body>
 </html>

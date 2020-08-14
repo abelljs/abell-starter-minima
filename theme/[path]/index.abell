@@ -1,0 +1,45 @@
+{{
+  const { globalMeta, meta, importContent, $root } = Abell;
+
+  const DarkModeToggle = require('../components/DarkModeToggle.abell');
+  const TwitterShareButton = require('../components/TwitterShareButton.abell');
+  const Footer = require('../components/Footer.abell');
+  const InlinedCSS = require('../static-assets/styles/InlinedCSS.abell');
+}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="{{ meta.description }}"/>
+  <link rel="shortcut icon" href="{{ $root }}/favicon.ico" type="image/x-icon" />
+  <meta name="og:title" content="{{ meta.title }}"/>
+  <meta name="og:description" content="{{ meta.description }}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="{{ $root }}/static-assets/styles/blog.css"/>
+
+  <title>{{ meta.title }} - {{ globalMeta.siteName }}</title>
+  
+  <InlinedCSS/>
+</head>
+<body>
+  <main>
+    <DarkModeToggle/>
+    <div class="blog-container">
+      <div class="content">
+        {{ importContent(`${meta.$path}/index.md`) }}
+      </div>
+    </div>
+    <hr/><br/><br/>
+    <TwitterShareButton 
+      props={link: `${globalMeta.domain}/${meta.$path}/`}
+    />
+  </main>
+  <Footer/>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script defer src="{{ $root }}/static-assets/js/static-main.js"></script>
+</body>
+</html>

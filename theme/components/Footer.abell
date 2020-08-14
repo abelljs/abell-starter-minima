@@ -1,0 +1,15 @@
+<AbellComponent>
+<template>
+  <footer>
+    <div style="text-align: right;">© <span id="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
+  </footer>
+</template>
+<style>
+  footer {
+    padding: 20px 30px;
+  }
+</style>
+<script>
+  document.querySelector('#footer-year').innerText = new Date().getFullYear();
+</script>
+</AbellComponent>
