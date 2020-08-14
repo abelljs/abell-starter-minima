@@ -24,7 +24,7 @@
 </head>
 <body>
   <main>
-    <DarkModeToggle/>
+    <DarkModeToggle props={$root}/>
     <div class="blog-container">
       <div class="content">
         {{ importContent(`${meta.$path}/index.md`) }}
@@ -32,7 +32,7 @@
     </div>
     <hr/><br/><br/>
     <TwitterShareButton 
-      props={link: `${globalMeta.domain}/${meta.$path}/`}
+      props={link: `${globalMeta.domain}/${meta.$path}/`, $root}
     />
   </main>
   <Footer/>

@@ -1,8 +1,8 @@
 <AbellComponent>
 <template>
   <button aria-label="Activate Dark Mode" aria-pressed="false" onclick="toggleTheme(this)" class="dark-mode-toggle">
-    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="../static-assets/icons/sun.svg" /></span>
-    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="../static-assets/icons/moon.svg" /></span>
+    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="{{ props.$root }}/static-assets/icons/sun.svg" /></span>
+    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="{{ props.$root }}/static-assets/icons/moon.svg" /></span>
   </button>
 </template>
 <!-- 
