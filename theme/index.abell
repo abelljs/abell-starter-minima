@@ -1,8 +1,8 @@
 {{
-  const { globalMeta, contentArray } = Abell;
+  const { globalMeta, contentArray, $root } = Abell;
   
   const DarkModeToggle = require('./components/DarkModeToggle.abell');
-  const globalInlinedCSS = require('./static-assets/styles/inlined/global.css.js');
+  const InlinedCSS = require('./static-assets/styles/InlinedCSS.abell');
   const Footer = require('./components/Footer.abell');
 }}
 <!DOCTYPE html>
@@ -12,11 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to the {{ globalMeta.siteName }}, A blog by {{ globalMeta.name }}" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./static-assets/styles/index.css">
+  <link rel="stylesheet" href="{{ $root }}/static-assets/styles/index.css">
   <title>{{ globalMeta.siteName }}</title>
-  <style>
-    {{ globalInlinedCSS }}
-  </style>
+  <InlinedCSS/>
 </head>
 <body>
   <header>
@@ -43,6 +41,6 @@
     </div>
   </main>
   <Footer/>
-  <script defer src="./static-assets/js/static-main.js"></script>
+  <script defer src="{{ $root }}/static-assets/js/static-main.js"></script>
 </body>
 </html>
