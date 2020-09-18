@@ -4,7 +4,7 @@
   const DarkModeToggle = require('../components/DarkModeToggle.abell');
   const TwitterShareButton = require('../components/TwitterShareButton.abell');
   const Footer = require('../components/Footer.abell');
-  const InlinedCSS = require('../static-assets/styles/InlinedCSS.abell');
+  const InlinedCSS = require('../static-assets/styles/inlined.css.abell');
 }}
 
 <!DOCTYPE html>

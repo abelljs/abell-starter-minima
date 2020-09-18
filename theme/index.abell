@@ -2,7 +2,7 @@
   const { globalMeta, contentArray, $root } = Abell;
   
   const DarkModeToggle = require('./components/DarkModeToggle.abell');
-  const InlinedCSS = require('./static-assets/styles/InlinedCSS.abell');
+  const InlinedCSS = require('./static-assets/styles/inlined.css.abell');
   const Footer = require('./components/Footer.abell');
 }}
 <!DOCTYPE html>
