@@ -32,6 +32,7 @@ After deployment, a repository will be created on your GitHub account. You can e
 Full documentation at [https://abelljs.org](https://abelljs.org)
 
 ## GitHub
+
 Source code of this template is available at [GitHub](https://github.com/abelljs/abell-starter-minima).
 
 Do drop ⭐️ on [this starter template](https://github.com/abelljs/abell-starter-minima) and the [Abell Repository](https://github.com/abelljs/abell)
