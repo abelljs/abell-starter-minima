@@ -1,5 +1,5 @@
 <AbellComponent>
-<style inlined>
+<style inlined global>
   body {
     --background-primary: #fff;
     --font-color-primary: #333;

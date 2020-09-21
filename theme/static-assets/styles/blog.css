@@ -2,40 +2,40 @@ main {
   padding: 100px 200px;
 }
 
-p{
+p {
   margin: 0px;
   padding: 1px 0px 15px 0px;
 }
 
-div.blog-container{
+div.blog-container {
   padding-top: 30px;
 }
 
-div.blog-container h1{
+div.blog-container h1 {
   font-size: 30pt;
   font-weight: bold;
 }
 
-div.blog-container h2{
+div.blog-container h2 {
   font-size: 23pt;
   font-weight: bold;
   margin-bottom: 14px;
 }
 
-div.blog-container h3{
+div.blog-container h3 {
   font-size: 16pt;
   font-weight: bold;
   margin-bottom: 14px;
 }
 
-code{
+code {
   background-color: var(--code-background);
   padding: 3px 8px;
   border-radius: 4px;
   font-family: var(--font-family-primary);
 }
 
-blockquote{
+blockquote {
   background-color: var(--code-background);
   margin: 0px;
   padding: 10px;
@@ -43,9 +43,9 @@ blockquote{
   border-left: 3px solid #333;
 }
 
-hr{
+hr {
   border-color: var(--code-background);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 @media (max-width: 768px) {

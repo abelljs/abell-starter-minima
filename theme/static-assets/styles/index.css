@@ -1,10 +1,10 @@
 /* CSS Variables defined in ./inlined/InlinedCSS.abell */
 
-header{
+header {
   width: 100%;
   padding: 100px 200px;
 }
-header > h1{
+header > h1 {
   margin: 10px 0px;
   font-size: 50pt;
 }
@@ -17,7 +17,7 @@ header > h1{
 .article-container {
   padding: 30px 200px 100px 200px;
 }
-.article-container > article{
+.article-container > article {
   background-color: var(--elevation-background);
   margin-bottom: 30px;
 }
@@ -25,19 +25,19 @@ header > h1{
   padding: 30px;
   display: block;
 }
-.article-container > article h2{
+.article-container > article h2 {
   margin: 9px 0px 0px 0px;
 }
-.article-container .article-description{
+.article-container .article-description {
   margin: 3px 0px;
   color: var(--font-color-primary);
 }
 
 @media (max-width: 768px) {
-  header{
+  header {
     padding: 30px 20px 100px 20px;
   }
-  .article-container{
+  .article-container {
     padding: 20px 20px 20px 20px;
   }
   .article-container > article > a {
