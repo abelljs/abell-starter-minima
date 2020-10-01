@@ -12,18 +12,18 @@ div.blog-container {
 }
 
 div.blog-container h1 {
-  font-size: 30pt;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 div.blog-container h2 {
-  font-size: 23pt;
+  font-size: 1.91rem;
   font-weight: bold;
   margin-bottom: 14px;
 }
 
 div.blog-container h3 {
-  font-size: 16pt;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 14px;
 }
