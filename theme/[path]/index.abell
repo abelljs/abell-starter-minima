@@ -41,6 +41,11 @@
     <DarkModeToggle props={$root}/>
     <div class="blog-container">
       <div class="content">
+        <h1>{{ meta.title }}</h1>
+        <div class="blog-date">
+          Published on {{ meta.$createdAt.toDateString() }}
+        </div>
+
         {{ importContent(`${meta.$path}/index.md`) }}
       </div>
     </div>
@@ -51,7 +56,7 @@
   </main>
   <Footer/>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
   <script defer src="{{ $root }}/static-assets/js/static-main.js"></script>

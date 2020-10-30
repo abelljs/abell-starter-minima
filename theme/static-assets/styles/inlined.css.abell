@@ -6,7 +6,7 @@
     --elevation-background: #fff;
     --code-background: #f3f3f3;
     --link-color: #006EB8;
-    --font-family-primary: 'Noto Sans KR', sans-serif;
+    --font-family-primary: 'Roboto', sans-serif;
   }
 
   body.dark {

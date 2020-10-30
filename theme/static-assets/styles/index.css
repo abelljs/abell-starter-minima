@@ -2,18 +2,25 @@
 
 header {
   width: 100%;
-  padding: 100px 200px;
+  padding: 100px 200px 50px 200px;
 }
 header > h1 {
   margin: 10px 0px;
   font-size: 4.2rem;
 }
 
+.header-bio {
+  padding: 20px 0px;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
 .article-date {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: var(--font-color-primary);
   padding: 0px 3px 2px 1px;
 }
+
 .article-container {
   padding: 30px 200px 100px 200px;
 }
