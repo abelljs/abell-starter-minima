@@ -10,7 +10,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {{ 
+    const ogImageOptions = `g_center,w_1100,c_fit,co_rgb:222222,l_text:Work Sans_80_600:${ meta.title }`;
+  }}
+
   <meta charset="UTF-8"/>
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ globalMeta.twitter }}" />
+  <meta property="og:title" content="{{ meta.title }}" />
+  <meta property="og:description" content="{{ meta.description }}" />
+  <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/{{ ogImageOptions }}/v1604047618/saurabh2021/cover.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:image:alt" content="Cover Image of blog with title written in it" />
+
   <meta name="description" content="{{ meta.description }}"/>
   <link rel="shortcut icon" href="{{ $root }}/favicon.ico" type="image/x-icon" />
   <meta name="og:title" content="{{ meta.title }}"/>
