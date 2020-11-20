@@ -1,15 +1,19 @@
 <AbellComponent>
 <template>
   <footer>
-    <div style="text-align: right;">© <span id="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
+    <div style="text-align: right;">© <span class="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
   </footer>
 </template>
+
+<!-- Styles are scoped for component by default -->
 <style>
   footer {
     padding: 20px 30px;
   }
 </style>
+
 <script>
-  document.querySelector('#footer-year').innerText = new Date().getFullYear();
+  // scopedSelector and scopedSelectorAll ensures that the element is selected from this component only
+  scopedSelector('span.footer-year').innerText = new Date().getFullYear();
 </script>
 </AbellComponent>
