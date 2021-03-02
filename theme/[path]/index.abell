@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
   {{ 
-    const ogImageOptions = `g_center,w_1100,c_fit,co_rgb:222222,l_text:Work Sans_80_600:${ meta.title }`;
+    const ogImageOptions = `c_scale,w_600/g_center,c_fit,e_colorize:50,co_rgb:222222,l_text:roboto_33_bold:${ encodeURI(meta.title).replace(/,/g, '%252C') },r_0,w_500,y_0,x_0`;
   }}
 
   <meta charset="UTF-8"/>
