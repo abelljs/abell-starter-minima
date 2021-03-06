@@ -1,12 +1,13 @@
 <AbellComponent>
-<style inlined global>
+<!-- Inlined styles -->
+<style global inlined>
   body {
     --background-primary: #fff;
     --font-color-primary: #333;
     --elevation-background: #fff;
     --code-background: #f3f3f3;
     --link-color: #006EB8;
-    --font-family-primary: 'Roboto', sans-serif;
+    --font-family-primary: 'DM Sans', sans-serif;
   }
 
   body.dark {
@@ -14,7 +15,7 @@
     --font-color-primary: #ccc; 
     --elevation-background: #1D1D1D;
     --code-background: #222;
-    --link-color: #09f;
+    --link-color: #80a9ed;
   }
 
   html, body {
@@ -48,4 +49,52 @@
     box-shadow: 0 5px 20px -4px #0005;
   }
 </style>
+
+<!-- Rest styles -->
+<style global>
+  .header {
+    width: 100%;
+    padding: 100px 250px 50px;
+  }
+  .header > h1 {
+    margin: 10px 0px;
+    font-size: 4.2rem;
+  }
+
+  .header-bio {
+    padding: 20px 0px;
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+
+  hr {
+    border-color: var(--code-background);
+    opacity: 0.3;
+  }
+
+  body.blog-page header {
+    padding: 50px 250px;
+  }
+
+  body.blog-page header .brand-link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--font-color-primary);
+  }
+
+  @media (max-width: 768px) {
+		.header {
+			padding: 30px 20px 100px 20px;
+		}
+  }
+</style>
+
+
+<script>
+  window.addEventListener(
+    "keydown",
+    (e) => e.keyCode === 9 && document.body.classList.add("user-is-tabbing")
+  );
+
+</script>
 </AbellComponent>

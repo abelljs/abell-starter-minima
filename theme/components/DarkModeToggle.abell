@@ -13,7 +13,9 @@
   /* DARK MODE SWITCH */
   .dark-mode-toggle {
     cursor: pointer;
-    float: right;
+    position: absolute;
+    right: 250px;
+    top: 40px;
     border: none;
     background: transparent;
   }

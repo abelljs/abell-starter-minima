@@ -1,12 +1,14 @@
 {{
   const { globalMeta, meta, importContent, $root } = Abell;
 
+  const CommonAssets = require('../components/CommonAssets.abell');
   const DarkModeToggle = require('../components/DarkModeToggle.abell');
+  const BlogContent = require('../components/BlogContent.abell');
   const TwitterShareButton = require('../components/TwitterShareButton.abell');
   const Footer = require('../components/Footer.abell');
-  const InlinedCSS = require('../static-assets/styles/inlined.css.abell');
 }}
 
+<CommonAssets />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,35 +32,30 @@
   <meta name="og:title" content="{{ meta.title }}"/>
   <meta name="og:description" content="{{ meta.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="{{ $root }}/static-assets/styles/blog.css"/>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
 
   <title>{{ meta.title }} - {{ globalMeta.siteName }}</title>
-  
-  <InlinedCSS/>
 </head>
-<body>
+<body class="blog-page">
   <main>
-    <DarkModeToggle props={$root}/>
+    <header>
+      <a class="brand-link" href="{{ $root }}">{{ globalMeta.siteName }}</a>
+      <DarkModeToggle props={$root}/>
+    </header>
     <div class="blog-container">
-      <div class="content">
-        <h1>{{ meta.title }}</h1>
-        <div class="blog-date">
-          Published on {{ meta.$createdAt.toDateString() }}
-        </div>
-
-        {{ importContent(`${meta.$path}/index.md`) }}
-      </div>
+      <BlogContent props={
+        importContent,
+        meta
+      } />
+      <hr/>
     </div>
-    <hr/><br/><br/>
     <TwitterShareButton 
       props={link: `${globalMeta.domain}/${meta.$path}/`, $root}
     />
   </main>
   <Footer/>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-  <script defer src="{{ $root }}/static-assets/js/static-main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 </body>
 </html>
