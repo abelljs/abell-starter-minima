@@ -1,0 +1,70 @@
+<AbellComponent>
+<template>
+  <div class="article-container {{ props.noPadding === true ? 'no-padding' : '' }}">
+    {{
+			props.contentArray
+				.map(meta => /* html */ `
+				<article class="shadow">
+						<a href="${meta.$root}/${meta.$path}/">
+						<h3>${meta.title}</h3>
+						<div class="article-date">Published on ${meta.$createdAt.toDateString()}</div>
+						<p class="article-description">${meta.description}</p>
+						</a>
+				</article>
+				`)
+    }}
+</div>
+</template>
+<style>
+	.article-date {
+		font-size: 0.9rem;
+		opacity: .7;
+		color: var(--font-color-primary);
+		padding: 0px 3px 2px 1px;
+	}
+
+	.article-container {
+		padding: 30px 250px 100px;
+	}
+
+	article {
+		border-radius: 2px;
+		overflow: hidden;
+	}
+
+	.article-container.no-padding {
+		padding: 0px;
+	}
+	.article-container > article {
+		background-color: var(--elevation-background);
+		margin-bottom: 30px;
+	}
+	.article-container > article > a {
+		padding: 30px;
+		display: block;
+	}
+	.article-container > article h3 {
+		margin: 0px 0px 6px;
+		font-size: 1.7rem;
+	}
+	.article-container .article-description {
+		margin: 8px 0px;
+		color: var(--font-color-primary);
+		font-size: 1.1rem;
+	}
+
+	@media (max-width: 768px) {
+		.article-container {
+			padding: 20px 20px 20px 20px;
+		}
+		.article-container > article > a {
+			padding: 15px 20px;
+			display: block;
+		}
+	}
+
+</style>
+<script>
+  
+</script>
+</AbellComponent>

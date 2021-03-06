@@ -1,0 +1,121 @@
+<AbellComponent>
+<!-- Inlined styles -->
+<style global inlined>
+  body {
+    --background-primary: #fff;
+    --font-color-primary: #333;
+    --elevation-background: #fff;
+    --code-background: #f3f3f3;
+    --link-color: #006EB8;
+    --font-family-primary: 'DM Sans', sans-serif;
+  }
+
+  body.dark {
+    --background-primary: #121212;
+    --font-color-primary: #ccc; 
+    --elevation-background: #1D1D1D;
+    --code-background: #222;
+    --link-color: #80a9ed;
+  }
+
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--background-primary);
+    font-family: var(--font-family-primary);
+    color: var(--font-color-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-primary);
+    color: var(--font-color-primary);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+  }
+
+  .shadow {
+    box-shadow: 0 5px 20px -4px #0005;
+  }
+</style>
+
+<!-- Rest styles -->
+<style global>
+  .header {
+    width: 100%;
+    padding: 100px 250px 50px;
+  }
+  .header > h1 {
+    margin: 10px 0px;
+    font-size: 4.2rem;
+  }
+
+  .header-bio {
+    padding: 20px 0px;
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+
+  hr {
+    border-color: var(--code-background);
+    opacity: .3;
+  }
+
+  body.dark hr {
+    border-color: #333;
+    opacity: 1;
+  }
+
+  body.blog-page header {
+    padding: 50px 250px;
+  }
+
+  body.blog-page header .brand-link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--font-color-primary);
+  }
+
+  body.blog-page .after-blog-content {
+    padding: 20px 300px;
+  }
+
+  body.blog-page .more-articles {
+    padding: 50px 0px;
+  }
+
+  @media (max-width: 768px) {
+		.header {
+			padding: 90px 20px 100px 20px;
+		}
+
+    body.blog-page header {
+      padding: 50px 12px 10px;
+    }
+
+    body.blog-page .after-blog-content {
+      padding: 20px 12px;
+    }
+  }
+</style>
+
+
+<script>
+  window.addEventListener(
+    "keydown",
+    (e) => e.keyCode === 9 && document.body.classList.add("user-is-tabbing")
+  );
+
+</script>
+</AbellComponent>

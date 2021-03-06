@@ -1,0 +1,103 @@
+<AbellComponent>
+<template>
+  <div class="content">
+    <h1>{{ props.meta.title }}</h1>
+    <div class="blog-date">
+      Published on {{ props.meta.$createdAt.toDateString() }}
+    </div>
+
+    <div class="blog-text">
+      {{ props.importContent(`${props.meta.$path}/index.md`) }}
+    </div>
+  </div>
+</template>
+<style>
+  .content {
+    padding: 40px 300px;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0px;
+    padding: 1px 0px 15px 0px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  h1 {
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+
+  .blog-date {
+    padding: 4px 5px 8px 5px;
+    margin-bottom: 50px;
+  }
+
+  code:not(.hljs) {
+    background-color: var(--code-background);
+  }
+
+  code {
+    padding: 0px 8px;
+    border-radius: 4px;
+    font-family: var(--font-family-primary);
+  }
+
+  pre > code {
+    padding: 20px !important;
+    word-spacing: 4px;
+  }
+
+  blockquote {
+    background-color: var(--code-background);
+    margin: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    border-left: 3px solid #333;
+  }
+
+  a {
+    border-bottom: 2px solid transparent;
+    transition: .2s ease;
+  }
+  a:hover {
+    border-bottom: 2px solid var(--link-color);
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8rem;
+    }
+
+    .content {
+      padding: 20px 12px;
+    }
+  }
+</style>
+<script>
+  try {
+    hljs.initHighlightingOnLoad();
+  } catch (err) {
+    console.log(err);
+  }
+</script>
+</AbellComponent>
