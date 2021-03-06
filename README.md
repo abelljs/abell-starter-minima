@@ -9,8 +9,6 @@
 
 A starter template for creating your blog with [abelljs/abell](https://github.com/abelljs/abell).
 
-***ABELL IS NOT READY SO DO NOT USE IT IN SERIOUS APPLICATIONS***
-
 
 ## Using this template to create your blog.
 
