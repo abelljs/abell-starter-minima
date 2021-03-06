@@ -69,7 +69,12 @@
 
   hr {
     border-color: var(--code-background);
-    opacity: 0.3;
+    opacity: .3;
+  }
+
+  body.dark hr {
+    border-color: #333;
+    opacity: 1;
   }
 
   body.blog-page header {
@@ -82,10 +87,26 @@
     color: var(--font-color-primary);
   }
 
+  body.blog-page .after-blog-content {
+    padding: 20px 300px;
+  }
+
+  body.blog-page .more-articles {
+    padding: 50px 0px;
+  }
+
   @media (max-width: 768px) {
 		.header {
-			padding: 30px 20px 100px 20px;
+			padding: 90px 20px 100px 20px;
 		}
+
+    body.blog-page header {
+      padding: 50px 12px 10px;
+    }
+
+    body.blog-page .after-blog-content {
+      padding: 20px 12px;
+    }
   }
 </style>
 

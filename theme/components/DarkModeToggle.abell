@@ -32,6 +32,12 @@
   body.dark .dark-mode-toggle .sun {display: none;}
   body .dark-mode-toggle .moon {display: none}
   body .dark-mode-toggle .sun {display: inline-block}
+
+  @media (max-width: 768px) {
+    .dark-mode-toggle {
+      right: 6px;
+    }
+  }
 </style>
 <script inlined>
   function toggleTheme(toggleButton) {

@@ -1,10 +1,11 @@
 {{
-  const { globalMeta, meta, importContent, $root } = Abell;
+  const { globalMeta, meta, importContent, contentArray, $root } = Abell;
 
   const CommonAssets = require('../components/CommonAssets.abell');
   const DarkModeToggle = require('../components/DarkModeToggle.abell');
   const BlogContent = require('../components/BlogContent.abell');
   const TwitterShareButton = require('../components/TwitterShareButton.abell');
+  const ArticlesPreview = require('../components/ArticlesPreview.abell');
   const Footer = require('../components/Footer.abell');
 }}
 
@@ -49,11 +50,20 @@
         importContent,
         meta
       } />
-      <hr/>
     </div>
-    <TwitterShareButton 
-      props={link: `${globalMeta.domain}/${meta.$path}/`, $root}
-    />
+    <div class="after-blog-content">
+      <hr/><br/>
+       <TwitterShareButton 
+        props={link: `${globalMeta.domain}/${meta.$path}/`, $root}
+      />
+      <div class="more-articles">
+        <h2>More on {{ globalMeta.siteName }}</h2>
+        <ArticlesPreview props={ 
+          contentArray: contentArray.filter(content => content.$path !== meta.$path), 
+          noPadding: true 
+        } />
+      </div>
+    </div>
   </main>
   <Footer/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>

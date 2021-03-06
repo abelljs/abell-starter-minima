@@ -77,6 +77,21 @@
   a:hover {
     border-bottom: 2px solid var(--link-color);
   }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8rem;
+    }
+
+    .content {
+      padding: 20px 12px;
+    }
+  }
 </style>
 <script>
   try {
