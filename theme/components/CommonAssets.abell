@@ -110,8 +110,6 @@
 
     body.blog-page header .brand-link {
       font-size: 1.3rem;
-      font-weight: 500;
-      color: var(--font-color-primary);
     }
   }
 </style>
