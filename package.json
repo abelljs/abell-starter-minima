@@ -2,17 +2,18 @@
   "name": "abell-starter-minima",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "abell build",
-    "dev": "abell serve"
+    "generate": "abell generate",
+    "dev": "abell dev"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "abell": "^0.10.0"
+    "abell": "1.0.0-alpha.100",
+    "vite-plugin-md-to-html": "^0.0.18"
   }
 }

@@ -1,15 +1,10 @@
-<AbellComponent>
-<template>
-  <button aria-label="Activate Dark Mode" aria-pressed="false" onclick="toggleTheme(this)" class="dark-mode-toggle">
-    <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="{{ props.$root }}/static-assets/icons/sun.svg" /></span>
-    <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="{{ props.$root }}/static-assets/icons/moon.svg" /></span>
-  </button>
-</template>
-<!-- 
-  'inlined' attribute inlines the CSS into main page's <head> tag during bundling 
-  This makes the script and styles load faster (since it avoids fetch request to new url)
--->
-<style inlined>
+<button aria-label="Activate Dark Mode" aria-pressed="false" onclick="toggleTheme(this)" class="dark-mode-toggle">
+  <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="{{ props.$root }}/static-assets/icons/sun.svg" /></span>
+  <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="{{ props.$root }}/static-assets/icons/moon.svg" /></span>
+</button>
+
+
+<style>
   /* DARK MODE SWITCH */
   .dark-mode-toggle {
     cursor: pointer;
@@ -39,7 +34,8 @@
     }
   }
 </style>
-<script inlined>
+
+<script type="module">
   function toggleTheme(toggleButton) {
     if (document.body.classList.contains('dark')) {
       document.body.classList.remove('dark');
@@ -67,4 +63,3 @@
     document.body.classList.add('dark');
   }
 </script>
-</AbellComponent>

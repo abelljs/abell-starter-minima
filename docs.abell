@@ -1,26 +1,27 @@
 {{
-  const { globalMeta, meta, importContent, contentArray, $root } = Abell;
+  import config from './config.js';
+  const { meta, importContent, contentArray, $root } = Abell;
 
-  const CommonAssets = require('../components/CommonAssets.abell');
-  const DarkModeToggle = require('../components/DarkModeToggle.abell');
-  const BlogContent = require('../components/BlogContent.abell');
-  const TwitterShareButton = require('../components/TwitterShareButton.abell');
-  const ArticlesPreview = require('../components/ArticlesPreview.abell');
-  const Footer = require('../components/Footer.abell');
+  import darkModeToggle from './components/dark-mode-toggle.abell';
+  import articlesPreview from './components/articles-preview.abell';
+  import twitterShareButton from './components/twitter-share-button.abell';
+  import footer from './components/footer.abell';
+
+  import blogContainer from './components/blog-container.abell';
 }}
 
-<CommonAssets />
 <!DOCTYPE html>
 <html lang="en">
 <head>
   {{ 
+    // declarations
     const ogImageOptions = `c_scale,w_600/g_center,c_fit,e_colorize:50,co_rgb:222222,l_text:roboto_33_bold:${ encodeURI(meta.title).replace(/,/g, '%252C') },r_0,w_500,y_0,x_0`;
   }}
 
   <meta charset="UTF-8"/>
   
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@{{ globalMeta.twitter }}" />
+  <meta name="twitter:creator" content="@{{ config.twitter }}" />
   <meta property="og:title" content="{{ meta.title }}" />
   <meta property="og:description" content="{{ meta.description }}" />
   <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/{{ ogImageOptions }}/v1604047618/saurabh2021/cover.png" />
@@ -29,7 +30,7 @@
   <meta property="og:image:alt" content="Cover Image of blog with title written in it" />
 
   <meta name="description" content="{{ meta.description }}"/>
-  <link rel="shortcut icon" href="{{ $root }}/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <meta name="og:title" content="{{ meta.title }}"/>
   <meta name="og:description" content="{{ meta.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,35 +38,38 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
 
-  <title>{{ meta.title }} - {{ globalMeta.siteName }}</title>
+  <title>{{ meta.title }} - {{ config.siteName }}</title>
 </head>
 <body class="blog-page">
   <main>
     <header>
-      <a class="brand-link" href="{{ $root }}">{{ globalMeta.siteName }}</a>
-      <DarkModeToggle props={$root}/>
+      <a class="brand-link" href="/">{{ config.siteName }}</a>
+      {{ darkModeToggle() }}
     </header>
     <div class="blog-container">
-      <BlogContent props={
-        importContent,
-        meta
-      } />
+      {{ blogContainer(props.path) }}
     </div>
     <div class="after-blog-content">
       <hr/><br/>
-       <TwitterShareButton 
-        props={link: `${globalMeta.domain}/${meta.$path}/`, $root}
-      />
+      {{ 
+        twitterShareButton({
+          link: `${config.domain}/${props.path}`
+        }) 
+      }}
       <div class="more-articles">
         <h2>More from the Author</h2>
-        <ArticlesPreview props={ 
-          contentArray: contentArray.filter(content => content.$path !== meta.$path), 
-          noPadding: true 
-        } />
+        {{ 
+          articlesPreview({ 
+            contentArray: props.contentArray,
+            noPadding: true,
+          })
+        }}
       </div>
     </div>
   </main>
-  <Footer/>
+  {{ footer() }}
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script src="./main.js" type="module"></script>
 </body>
 </html>

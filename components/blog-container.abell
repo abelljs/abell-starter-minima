@@ -1,16 +1,14 @@
-<AbellComponent>
-<template>
-  <div class="content">
-    <h1>{{ props.meta.title }}</h1>
-    <div class="blog-date">
-      Published on {{ props.meta.$createdAt.toDateString() }}
-    </div>
-
-    <div class="blog-text">
-      {{ props.importContent(`${props.meta.$path}/index.md`) }}
-    </div>
+<div class="content">
+  <h1>{{ props.meta.title }}</h1>
+  <div class="blog-date">
+    Published on {{ props.meta.$createdAt.toDateString() }}
   </div>
-</template>
+
+  <div class="blog-text">
+    {{ props.importContent(`${props.meta.$path}/index.md`) }}
+  </div>
+</div>
+
 <style>
   .content {
     padding: 40px 300px;
@@ -93,11 +91,3 @@
     }
   }
 </style>
-<script>
-  try {
-    hljs.initHighlightingOnLoad();
-  } catch (err) {
-    console.log(err);
-  }
-</script>
-</AbellComponent>

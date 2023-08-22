@@ -1,0 +1,14 @@
+<footer>
+  <div style="text-align: right;">© <span class="footer-year"></span>, Built with <a href="https://github.com/abelljs/abell">Abell</a></div>
+</footer>
+
+<!-- Styles are scoped for component by default -->
+<style>
+  footer {
+    padding: 20px 30px;
+  }
+</style>
+
+<script>
+  document.querySelector('span.footer-year').innerText = new Date().getFullYear();
+</script>
