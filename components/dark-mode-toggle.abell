@@ -1,6 +1,6 @@
-<button aria-label="Activate Dark Mode" aria-pressed="false" onclick="toggleTheme(this)" class="dark-mode-toggle">
-  <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="{{ props.$root }}/static-assets/icons/sun.svg" /></span>
-  <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="{{ props.$root }}/static-assets/icons/moon.svg" /></span>
+<button aria-label="Activate Dark Mode" aria-pressed="false" class="dark-mode-toggle">
+  <span class="sun"> <img alt="sun icon that represents light mode" width="35px" src="/icons/sun.svg" /></span>
+  <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="/icons/moon.svg" /></span>
 </button>
 
 
@@ -53,6 +53,10 @@
       }
     }
   }
+
+  document.querySelector('.dark-mode-toggle').addEventListener('click', (e) => {
+    toggleTheme(e.target);
+  })
 
   const localPreference = window.localStorage.getItem('prefers-theme');
 
