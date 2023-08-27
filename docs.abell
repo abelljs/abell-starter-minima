@@ -1,6 +1,5 @@
 {{
   import config from './config.js';
-  const { meta, importContent, contentArray, $root } = Abell;
 
   import darkModeToggle from './components/dark-mode-toggle.abell';
   import articlesPreview from './components/articles-preview.abell';
@@ -10,35 +9,37 @@
   import blogContainer from './components/blog-container.abell';
 }}
 
+{{ 
+  // declarations
+
+  const currentContent = props.content[props.path];
+
+  const ogImageOptions = `c_scale,w_600/g_center,c_fit,e_colorize:50,co_rgb:222222,l_text:roboto_33_bold:${ encodeURI(currentContent.attributes.title).replace(/,/g, '%252C') },r_0,w_500,y_0,x_0`;
+}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {{ 
-    // declarations
-    const ogImageOptions = `c_scale,w_600/g_center,c_fit,e_colorize:50,co_rgb:222222,l_text:roboto_33_bold:${ encodeURI(meta.title).replace(/,/g, '%252C') },r_0,w_500,y_0,x_0`;
-  }}
-
   <meta charset="UTF-8"/>
-  
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@{{ config.twitter }}" />
-  <meta property="og:title" content="{{ meta.title }}" />
-  <meta property="og:description" content="{{ meta.description }}" />
+  <meta property="og:title" content="{{ currentContent.attributes.title }}" />
+  <meta property="og:description" content="{{ currentContent.attributes.description }}" />
   <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/{{ ogImageOptions }}/v1604047618/saurabh2021/cover.png" />
   <meta property="og:image:width" content="600" />
   <meta property="og:image:height" content="300" />
   <meta property="og:image:alt" content="Cover Image of blog with title written in it" />
 
-  <meta name="description" content="{{ meta.description }}"/>
+  <meta name="description" content="{{ currentContent.attributes.description }}"/>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <meta name="og:title" content="{{ meta.title }}"/>
-  <meta name="og:description" content="{{ meta.description }}"/>
+  <meta name="og:title" content="{{ currentContent.attributes.title }}"/>
+  <meta name="og:description" content="{{ currentContent.attributes.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
 
-  <title>{{ meta.title }} - {{ config.siteName }}</title>
+  <title>{{ currentContent.attributes.title }} - {{ config.siteName }}</title>
 </head>
 <body class="blog-page">
   <main>
@@ -47,7 +48,7 @@
       {{ darkModeToggle() }}
     </header>
     <div class="blog-container">
-      {{ blogContainer(props.path) }}
+      {{ blogContainer({ currentContent }) }}
     </div>
     <div class="after-blog-content">
       <hr/><br/>
@@ -60,7 +61,8 @@
         <h2>More from the Author</h2>
         {{ 
           articlesPreview({ 
-            contentArray: props.contentArray,
+            content: props.content,
+            filterPath: props.path,
             noPadding: true,
           })
         }}
@@ -69,7 +71,7 @@
   </main>
   {{ footer() }}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
   <script src="./main.js" type="module"></script>
+  <script src="./docs.js" type="module"></script>
 </body>
 </html>

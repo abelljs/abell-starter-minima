@@ -1,5 +1,5 @@
 import index from './index.abell';
-// import docs from './docs.abell';
+import docs from './docs.abell';
 
 
 
@@ -20,10 +20,10 @@ const content = Object.entries(contentGlob).reduce((prev, [contentMdPath, conten
   return prev;
 }, {});
 
-// const docsPaths = Object.values(content).map((currentContent) => ({
-//   path: currentContent.path,
-//   render: () => docs({ content, path: currentContent.path })
-// }))
+const docsPaths = Object.values(content).map((currentContent) => ({
+  path: currentContent.path,
+  render: () => docs({ content, path: currentContent.path })
+}))
 
 /**
  * 
@@ -35,6 +35,6 @@ export const makeRoutes = () => {
       path: '/',
       render: () => index({ content })
     },
-    // ...docsPaths
+    ...docsPaths
   ]
 }

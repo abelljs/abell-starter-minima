@@ -1,9 +1,10 @@
 <div class="article-container {{ props.noPadding === true ? 'no-padding' : '' }}">
 	{{
 		Object.values(props.content)
+			.filter((meta) => meta.path !== props.filterPath)
 			.map(meta => /* html */ `
 			<article class="shadow">
-					<a href="/${meta.path}">
+					<a href="${meta.path}">
 					<h3>${meta.attributes.title}</h3>
 					<div class="article-date">Published on ${new Date(meta.attributes.createdAt).toDateString()}</div>
 					<p class="article-description">${meta.attributes.description}</p>
@@ -49,6 +50,12 @@ article {
 	margin: 8px 0px;
 	color: var(--font-color-primary);
 	font-size: 1.1rem;
+	padding: 0px;
+	line-height: unset;
+}
+
+a {
+	border-bottom: none;
 }
 
 @media (max-width: 768px) {
