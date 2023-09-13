@@ -1,0 +1,19 @@
+<a 
+  target="_blank" 
+  rel="noopener noreferer" 
+  class="twitter-share-button blog dynamic-url shadow" 
+  href="https://twitter.com/intent/tweet?text={{ props.link }}" 
+  data-size="large"
+>
+  <img width="20" style="position: relative;top:4px;" alt="Twitter Logo" src="/icons/twitter.svg"> 
+  &nbsp;Share on Twitter
+</a>
+
+<style>
+  .twitter-share-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-bottom: none;
+    background-color: var(--elevation-background);
+  }
+</style>

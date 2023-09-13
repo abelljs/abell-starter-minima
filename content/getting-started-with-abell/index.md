@@ -1,3 +1,9 @@
+---
+title: "Getting Started with Abell"
+description: "Abell is a static site generator. This blog will take you through the basics of Abell."
+createdAt: "19 June 2020"
+---
+
 Abell is a JavaScript based static-site-generator and a Template Engine to help you create JSON, Markdown, or static-data based websites.
 
 Check out [abelljs.org](https://abelljs.org) for complete documentation.

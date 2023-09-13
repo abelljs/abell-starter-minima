@@ -1,0 +1,44 @@
+{{
+  import config from './config.js';
+
+  import darkModeToggle from './components/dark-mode-toggle.abell';
+  import articlesPreview from './components/articles-preview.abell';
+  import footer from './components/footer.abell';
+}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ config.twitter }}" />
+  <meta property="og:title" content="{{ config.siteName }}" />
+  <meta property="og:description" content="{{ config.siteName }}" />
+  <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/g_center,w_1100,c_fit,co_rgb:222222,l_text:Work Sans_80_600:{{ config.siteName }}/v1604047618/saurabh2021/cover.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the {{ config.siteName }}, A blog by {{ config.name }}" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>{{ config.siteName }}</title>
+</head>
+<body>
+  {{ darkModeToggle() }}
+
+  <div class="header">
+    <h1>{{ config.siteName }}</h1>
+    <div class="header-bio">
+      Abell Minima is a starter blog built with Abell. <br/>This template is designed 
+      and maintained by 
+      <a href="https://twitter.com/{{ config.twitter }}">Twitter @{{ config.twitter }}</a>.
+    </div>
+  </div>
+
+  <main>
+  {{ articlesPreview({ content: props.content }) }}
+  </main>
+
+  {{ footer() }}
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

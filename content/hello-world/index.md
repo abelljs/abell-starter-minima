@@ -1,3 +1,9 @@
+---
+title: "Hello, World!"
+description: "This is the first blog."
+createdAt: "18 June 2020"
+---
+
 Hi, I am Saurabh. I like writing blogs but now I am too bored so here's Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nisl dolor, molestie eget eros vitae, auctor efficitur lorem. Morbi aliquet semper purus, ut facilisis metus efficitur congue.
 
 
@@ -31,7 +37,7 @@ console.log(c);
 
 ## Doggo
 
-![a doggo gif with doggo moving his ears up and down](assets/doggo.gif)
+![a doggo gif with doggo moving his ears up and down](./assets/doggo.gif)
 
 *Bye 🐨*
 

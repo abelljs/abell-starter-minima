@@ -1,17 +1,16 @@
-<AbellComponent>
-<template>
-  <div class="content">
-    <h1>{{ props.meta.title }}</h1>
-    <div class="blog-date">
-      Published on {{ props.meta.$createdAt.toDateString() }}
-    </div>
-
-    <div class="blog-text">
-      {{ props.importContent(`${props.meta.$path}/index.md`) }}
-    </div>
+<div class="content">
+  <h1>{{ props.currentContent.attributes.title }}</h1>
+  <div class="blog-date">
+    Published on {{ new Date(props.currentContent.attributes.createdAt).toDateString() }}
   </div>
-</template>
-<style>
+
+  <div class="blog-text">
+    {{ props.currentContent.html }}
+  </div>
+</div>
+
+<!-- Setting scoped false because content that is dynamically rendererd (in this case HTML from blog) cannot be scoped -->
+<style scoped="false">
   .content {
     padding: 40px 300px;
     font-size: 1.05rem;
@@ -22,6 +21,10 @@
     padding: 1px 0px 15px 0px;
     font-size: 1.25rem;
     line-height: 2rem;
+  }
+
+  blockquote p {
+    padding: 0px;
   }
 
   h1 {
@@ -93,11 +96,3 @@
     }
   }
 </style>
-<script>
-  try {
-    hljs.initHighlightingOnLoad();
-  } catch (err) {
-    console.log(err);
-  }
-</script>
-</AbellComponent>
