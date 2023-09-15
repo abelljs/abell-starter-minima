@@ -1,9 +1,9 @@
-# Abell Starter Minima
+<h1 align="center">✨ Abell Starter Minima ✨</h1>
 
-Official Blog Starter template for [Abell](https://github.com/abelljs/abell)
+<p align="center"><a href="https://pr.new/github.com/abelljs/abell-starter-minima"><b>Open in Stackblitz Codeflow</b></a> &nbsp;•&nbsp; <a href="https://abell-starter-minima.netlify.app"><b>Preview</b></a> &nbsp;•&nbsp; <a href="https://github.com/abelljs/abell-starter-minima/generate"><b>Create GitHub Repo from Template</b></a></p>
 
 
-[**Open in Stackblitz Codeflow**](https://pr.new/github.com/abelljs/abell-starter-minima) | [**Preview**](https://abell-starter-minima.netlify.app)
+<p align="center">Official Blog Starter template for <a href="https://github.com/abelljs/abell">Abell</a></p>
 
 
 ## Usage
@@ -22,7 +22,7 @@ Create Repository to your account, and Deploy to Netlify in one click 🎉
 
 This will create a repository in your GitHub and will deploy it to the Netlify.
 
-## Write/Edit blogs
+## Write / Edit blogs
 
 
 ```sh
