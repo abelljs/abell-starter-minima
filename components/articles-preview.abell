@@ -1,57 +1,61 @@
-<div class="article-container {{ props.noPadding === true ? 'no-padding' : '' }}">
+<div class="article-container">
 	{{
 		Object.values(props.content)
 			.filter((meta) => meta.path !== props.filterPath)
 			.map(meta => /* html */ `
 			<article class="shadow">
-					<a href="${meta.path}">
-					<h3>${meta.attributes.title}</h3>
+				<a class="no-underline" href="${meta.path}">
+					<h2>${meta.attributes.title}</h2>
 					<div class="article-date">Published on ${new Date(meta.attributes.createdAt).toDateString()}</div>
 					<p class="article-description">${meta.attributes.description}</p>
-					</a>
+				</a>
 			</article>
 			`)
 	}}
 </div>
 
 <style>
+.article-container {
+	padding: 52px 0px;
+}
+
 .article-date {
 	font-size: 0.9rem;
 	opacity: .7;
 	color: var(--font-color-primary);
-	padding: 0px 3px 2px 1px;
 }
 
-.article-container {
-	padding: 30px 250px 100px;
-}
 
 article {
 	border-radius: 2px;
 	overflow: hidden;
+	scale: 1;
+	transition: scale .2s ease;
 }
 
-.article-container.no-padding {
-	padding: 0px;
+article:hover, article:focus-within {
+	scale: 1.01;
 }
+
 .article-container > article {
 	background-color: var(--elevation-background);
-	margin-bottom: 30px;
+	margin-bottom: 38px;
 }
 .article-container > article > a {
-	padding: 30px;
+	padding: 32px;
 	display: block;
 }
-.article-container > article h3 {
-	margin: 0px 0px 6px;
-	font-size: 1.7rem;
+.article-container > article h2 {
+	font-size: 2rem;
+	line-height: 3rem;
+	margin: 0px;
 }
 .article-container .article-description {
-	margin: 8px 0px;
+	margin: 0px;
 	color: var(--font-color-primary);
 	font-size: 1.1rem;
 	padding: 0px;
-	line-height: unset;
+	line-height: var(--font-small-line-height);
 }
 
 a {
@@ -59,12 +63,8 @@ a {
 }
 
 @media (max-width: 768px) {
-	.article-container {
-		padding: 20px 20px 20px 20px;
-	}
 	.article-container > article > a {
-		padding: 15px 20px;
-		display: block;
+		padding: 24px 24px;
 	}
 }
 </style>

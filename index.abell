@@ -19,26 +19,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to the {{ config.siteName }}, A blog by {{ config.name }}" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./global.css" />
   <title>{{ config.siteName }}</title>
 </head>
 <body>
-  {{ darkModeToggle() }}
+  <div class="content-width">
+    {{ darkModeToggle() }}
 
-  <div class="header">
-    <h1>{{ config.siteName }}</h1>
-    <div class="header-bio">
-      Abell Minima is a starter blog built with Abell. <br/>This template is designed 
-      and maintained by 
-      <a href="https://twitter.com/{{ config.twitter }}">Twitter @{{ config.twitter }}</a>.
+    <div class="header">
+      <h1>{{ config.siteName }}</h1>
+      <div class="header-bio">
+        Abell Minima is a starter blog built with Abell. <br/>This is an official template and is designed 
+        and maintained by 
+        <a href="https://twitter.com/{{ config.twitter }}">@{{ config.twitter }}</a>.
+      </div>
     </div>
+
+    <main>
+    {{ articlesPreview({ content: props.content }) }}
+    </main>
+
+    {{ footer() }}
   </div>
-
-  <main>
-  {{ articlesPreview({ content: props.content }) }}
-  </main>
-
-  {{ footer() }}
-
   <script src="./main.js" type="module"></script>
 </body>
 </html>
