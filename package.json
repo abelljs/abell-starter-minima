@@ -14,7 +14,6 @@
   "license": "MIT",
   "devDependencies": {
     "abell": "1.0.0-alpha.106",
-    "vite-plugin-inline-source": "^2.3.0",
     "vite-plugin-md-to-html": "^0.0.18"
   },
   "dependencies": {
