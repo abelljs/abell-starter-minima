@@ -43,6 +43,11 @@
   <title>{{ currentContent.attributes.title }} - {{ config.siteName }}</title>
 </head>
 <body class="blog-page">
+  <!-- 
+    Inlining the theme switching script using vite-plugin-inline-source 
+    This helps is avoiding flash of wrong theme while scripts are loading
+  -->
+  <script inline-source src="./theme-switch.js"></script>
   <div class="content-width">
     <main>
       <header>
@@ -72,11 +77,5 @@
     </main>
     {{ footer() }}
   </div>
-
-  <!-- 
-    Inlining the theme switching script using vite-plugin-inline-source 
-    This helps is avoiding flash of wrong theme while scripts are loading
-  -->
-  <script inline-source src="./theme-switch.js"></script>
   </body>
 </html>
