@@ -22,7 +22,7 @@ Create Repository to your account, and Deploy to Netlify in one click 🎉
 
 This will create a repository in your GitHub and will deploy it to the Netlify.
 
-## Write/Edit blogs
+## Write / Edit blogs
 
 
 ```sh
