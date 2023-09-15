@@ -1,20 +1,17 @@
-# Abell Starter Template
+# Abell Starter Minima
+
+Official Blog Starter template for [Abell](https://github.com/abelljs/abell)
 
 
-![Screenshot of Abell Minima Template's Cover. The cover shows dark and light mode of Minima with a picture of mobile view](https://res.cloudinary.com/saurabhdaware/image/upload/v1588342001/abell/og.png)
-
-**DEMO: https://abell-starter-minima.netlify.app**
-
-<p align="left"><a href="https://npmjs.org/package/abell"><img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/abelljs/abell/main?style=for-the-badge&labelColor=black&logo=npm&label=abell&color=darkred"></a> &nbsp; <a href="https://twitter.com/abellland"><img alt="Twitter profile badge of @abellland" src="https://img.shields.io/badge/follow-@AbellLand-1DA1F2?style=for-the-badge&logo=twitter&logoColor=1DA1F2&labelColor=black"/></a> </p>
-
-A starter template for creating your blog with [abelljs/abell](https://github.com/abelljs/abell).
+[**Open in Stackblitz Codeflow**](https://pr.new/github.com/abelljs/abell-starter-minima) | [**Preview**](https://abell-starter-minima.netlify.app)
 
 
-## Using this template to create your blog.
+## Usage
 
-### Create locally with create-abell-app
-```
-npx create-abell-app my-blog --template abelljs/abell-starter-minima
+### Scaffold Locally
+
+```sh
+npx create-abell --template abelljs/abell-starter-minima
 ```
 
 or
@@ -27,17 +24,18 @@ This will create a repository in your GitHub and will deploy it to the Netlify.
 
 ## Write/Edit blogs
 
-- Take a local copy of your blog
-  `git clone <blog-github-url>`
-- `cd` to the new cloned folder
-- `npm run dev` to run a dev server
 
-The new repository will have a `content` folder in the root directory. You can edit blogs from there and you can create a new folder with `index.md` to create a new blog.
+```sh
+# Run dev server
+npm run dev
 
-To see the final output, you can build the site with `npm run build`
+# Run build
+npm run generate
+```
+
+You will find content in the `/content` directory. For documentation on how to customize, checkout [Abell Documentation](https://abelljs.org)
+
 
 ---
 
-For documentation on editing layout, check out README of [abelljs/abell](https://github.com/abelljs/abell) repository
-
-Thank you and do let us know what you think [Twitter @AbellLand](https://twitter.com/abellland)
+Thank you and do let us know what you think on [Twitter @AbellLand](https://twitter.com/abellland)
