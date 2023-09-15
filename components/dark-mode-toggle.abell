@@ -9,13 +9,10 @@
   .dark-mode-toggle {
     cursor: pointer;
     position: absolute;
-    right: 250px;
+    right: var(--content-padding-x);
     top: 40px;
     border: none;
     background: transparent;
-  }
-  body:not(.user-is-tabbing) .dark-mode-toggle:focus {
-    outline: none;
   }
   .dark-mode-toggle .moon {
     padding: 10px;
@@ -30,7 +27,7 @@
 
   @media (max-width: 768px) {
     .dark-mode-toggle {
-      right: 6px;
+      top: 20px;
     }
   }
 </style>

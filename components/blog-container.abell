@@ -12,15 +12,12 @@
 <!-- Setting scoped false because content that is dynamically rendererd (in this case HTML from blog) cannot be scoped -->
 <style scoped="false">
   .content {
-    padding: 40px 300px;
-    font-size: 1.05rem;
+    padding-bottom: 40px;
   }
 
   p {
     margin: 0px;
     padding: 1px 0px 15px 0px;
-    font-size: 1.25rem;
-    line-height: 2rem;
   }
 
   blockquote p {
@@ -29,12 +26,14 @@
 
   h1 {
     font-size: 3.3rem;
+    line-height: 4.2rem;
     font-weight: bold;
     margin-bottom: 10px;
   }
 
   h2 {
     font-size: 2.5rem;
+    line-height: 4rem;
     font-weight: bold;
     margin-bottom: 14px;
   }
@@ -54,15 +53,20 @@
     background-color: var(--code-background);
   }
 
+  code.hljs {
+    background-color: var(--code-block-background);
+  }
+
   code {
     padding: 0px 8px;
-    border-radius: 4px;
-    font-family: var(--font-family-primary);
+    border-radius: 6px;
+    font-family: 'Menlo', monospace;
+    font-size: var(--font-small);
+    line-height: var(--font-small-line-height);
   }
 
   pre > code {
     padding: 20px !important;
-    word-spacing: 4px;
   }
 
   blockquote {
@@ -71,28 +75,5 @@
     padding: 10px;
     padding-left: 20px;
     border-left: 3px solid #333;
-  }
-
-  a {
-    border-bottom: 2px solid transparent;
-    transition: .2s ease;
-  }
-  a:hover {
-    border-bottom: 2px solid var(--link-color);
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.8rem;
-    }
-
-    p {
-      font-size: 1.15rem;
-      line-height: 1.8rem;
-    }
-
-    .content {
-      padding: 20px 12px;
-    }
   }
 </style>

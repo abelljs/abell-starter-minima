@@ -37,41 +37,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css" />
+  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="./global.css" />
 
   <title>{{ currentContent.attributes.title }} - {{ config.siteName }}</title>
 </head>
 <body class="blog-page">
-  <main>
-    <header>
-      <a class="brand-link" href="/">{{ config.siteName }}</a>
-      {{ darkModeToggle() }}
-    </header>
-    <div class="blog-container">
-      {{ blogContainer({ currentContent }) }}
-    </div>
-    <div class="after-blog-content">
-      <hr/><br/>
-      {{ 
-        twitterShareButton({
-          link: `${config.domain}/${props.path}`
-        }) 
-      }}
-      <div class="more-articles">
-        <h2>More from the Author</h2>
-        {{ 
-          articlesPreview({ 
-            content: props.content,
-            filterPath: props.path,
-            noPadding: true,
-          })
-        }}
+  <div class="content-width">
+    <main>
+      <header>
+        <a class="brand-link" href="/">{{ config.siteName }}</a>
+        {{ darkModeToggle() }}
+      </header>
+      <div class="blog-container">
+        {{ blogContainer({ currentContent }) }}
       </div>
-    </div>
-  </main>
-  {{ footer() }}
+      <div class="after-blog-content">
+        <hr/><br/>
+        {{ 
+          twitterShareButton({
+            link: `${config.domain}/${props.path}`
+          }) 
+        }}
+        <div class="more-articles">
+          <h2>More from the Author</h2>
+          {{ 
+            articlesPreview({ 
+              content: props.content,
+              filterPath: props.path,
+            })
+          }}
+        </div>
+      </div>
+    </main>
+    {{ footer() }}
+  </div>
 
   <script src="./main.js" type="module"></script>
-  <script src="./docs.js" type="module"></script>
 </body>
 </html>

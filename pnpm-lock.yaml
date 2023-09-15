@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   abell:
-    specifier: 1.0.0-alpha.101
-    version: 1.0.0-alpha.101
+    specifier: 1.0.0-alpha.106
+    version: 1.0.0-alpha.106
   vite-plugin-md-to-html:
     specifier: ^0.0.18
     version: 0.0.18
@@ -217,8 +217,8 @@ packages:
     dev: true
     optional: true
 
-  /abell@1.0.0-alpha.101:
-    resolution: {integrity: sha512-AXLcYum51AY2Gr/BW7qvz4cqP+WKI3VT3d1EkVSVKq2pffJQKo3+7+jkwa+EFm0pGxPaaBn0wSsqNnCvGFEthQ==}
+  /abell@1.0.0-alpha.106:
+    resolution: {integrity: sha512-0h3jCRz5GdVlajZhQOV4zD+eWym6iiufXM9KUdJwevFq4aPWyyiFTgIVCi0PUduWiGBngxVt4cZATNrFeAs6Kg==}
     hasBin: true
     dependencies:
       commander: 7.2.0

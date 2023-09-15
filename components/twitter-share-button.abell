@@ -1,7 +1,7 @@
 <a 
   target="_blank" 
   rel="noopener noreferer" 
-  class="twitter-share-button blog dynamic-url shadow" 
+  class="twitter-share-button blog dynamic-url shadow-light" 
   href="https://twitter.com/intent/tweet?text={{ props.link }}" 
   data-size="large"
 >
@@ -12,8 +12,14 @@
 <style>
   .twitter-share-button {
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 6px;
     border-bottom: none;
+    border: 1px solid var(--code-background);
     background-color: var(--elevation-background);
+    color: var(--font-color-primary);
+    transition: color .2s ease;
+  }
+  a.twitter-share-button:hover {
+    color: #09f;
   }
 </style>
