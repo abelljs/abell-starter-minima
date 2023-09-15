@@ -41,6 +41,10 @@
 
     {{ footer() }}
   </div>
-  <script src="./main.js" type="module"></script>
+  <!-- 
+    Inlining the theme switching script using vite-plugin-inline-source 
+    This helps is avoiding flash of wrong theme while scripts are loading
+  -->
+  <script inline-source src="./theme-switch.js"></script>
 </body>
 </html>
