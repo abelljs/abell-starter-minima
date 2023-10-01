@@ -1,6 +1,8 @@
 {{
   import config from './config.js';
 
+  import globalCSSInlined from './global.css?inline';
+
   import darkModeToggle from './components/dark-mode-toggle.abell';
   import articlesPreview from './components/articles-preview.abell';
   import twitterShareButton from './components/twitter-share-button.abell';
@@ -41,9 +43,11 @@
 
   <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
   <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
-  <link rel="stylesheet" href="./global.css" />
 
   <title>{{ currentContent.attributes.title }} - {{ config.siteName }}</title>
+  <style>
+    {{ globalCSSInlined }}
+  </style>
 </head>
 <body class="blog-page">
   <div class="content-width">

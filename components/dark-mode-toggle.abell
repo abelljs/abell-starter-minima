@@ -1,6 +1,6 @@
 <button aria-label="Activate Dark Mode" aria-pressed="false" class="dark-mode-toggle">
-  <span class="sun"><img alt="sun icon that represents light mode" width="35px" src="/icons/sun.svg" /></span>
-  <span class="moon"><img alt="moon icon to represent dark mode " width="25px" src="/icons/moon.svg" /></span>
+  <span class="sun"><img alt="sun icon that represents light mode" width="35px" height="35px" src="/icons/sun.svg" /></span>
+  <span class="moon"><img alt="moon icon to represent dark mode " width="25px" height="25px" src="/icons/moon.svg" /></span>
 </button>
 
 
