@@ -18,7 +18,7 @@
   <meta name="twitter:creator" content="@{{ config.twitter }}" />
   <meta property="og:title" content="{{ config.siteName }}" />
   <meta property="og:description" content="{{ config.siteName }}" />
-  <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/g_center,w_1100,c_fit,co_rgb:222222,l_text:Work Sans_80_600:{{ config.siteName }}/v1604047618/saurabh2021/cover.png" />
+  <meta property="og:image" content="https://res.cloudinary.com/saurabhdaware/image/upload/g_center,w_1100,c_fit,co_rgb:000000,l_text:Work Sans_80_600:{{ config.siteName }}/v1696316938/abell/abell-starter-minima-cover.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to the {{ config.siteName }}, A blog by {{ config.name }}" />
