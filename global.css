@@ -24,12 +24,12 @@
 
 body {
   --background-primary: #fff;
-  --font-color-primary: #333;
+  --font-color-primary: #222;
   --elevation-background: #fff;
   --code-background: #f3f3f3;
   --brand-color: #2E3ECC;
   --code-block-background: #111;
-  --link-color: #6573f8;
+  --link-color: #4b5cf5;
   --font-family-primary: 'DM Sans Variable', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --content-max-width: 800px;
   --content-padding-x: 24px;
@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: var(--link-color);
+  /* background-color: var(--font-color-primary); */
   font-weight: 500;
   border-bottom: 2px solid transparent;
   transition: border-bottom .2s ease;
