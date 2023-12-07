@@ -7,5 +7,9 @@ export default defineConfig({
       resolveImageLinks: true,
       syntaxHighlighting: true
     }),
-  ]
+  ],
+  abell: {
+    // This in combination of `resolveImageLinks: true` has an issue where it skips resolving links in pages where transformation was skipped
+    optimizedTransformations: false
+  }
 })

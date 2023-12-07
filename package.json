@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "abell": "1.0.0-alpha.110",
+    "abell": "1.0.0-beta.4",
     "vite-plugin-md-to-html": "^0.0.18"
   },
   "dependencies": {
