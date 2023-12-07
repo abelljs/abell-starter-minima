@@ -49,6 +49,7 @@ body.dark {
   --elevation-background: #1D1D1D;
   --code-background: #222;
   --brand-color: #737fe2;
+  --link-color: var(--brand-color);
   --code-block-background: #1f1f1f;
 }
 
