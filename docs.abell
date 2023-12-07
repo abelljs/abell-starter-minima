@@ -23,6 +23,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="view-transition" content="same-origin" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
@@ -40,8 +41,7 @@
   <meta name="og:title" content="{{ currentContent.attributes.title }}"/>
   <meta name="og:description" content="{{ currentContent.attributes.description }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" />
+  <link rel="preload"  href="/fonts/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
 
   <title>{{ currentContent.attributes.title }} - {{ config.siteName }}</title>
