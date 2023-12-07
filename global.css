@@ -40,6 +40,7 @@ body {
   --font-small: 1rem;
   --font-small-line-height: 2rem;
   font-family: var(--font-family-primary);
+  font-weight: 400;
 }
 
 body.dark {
@@ -76,6 +77,10 @@ a {
   font-weight: 500;
   border-bottom: 2px solid transparent;
   transition: border-bottom .2s ease;
+}
+
+p {
+  font-weight: 400;
 }
 
 a:hover, a:focus-within {
